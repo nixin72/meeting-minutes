@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Meeting minutes</title>
+	</head>
+	<body>
+		<section class="header">
+			<nav>
+				<ul>
+					<li><a href="index.html#takeNotes" class="link">Take Notes</a></li>
+					<li><a href="index.html#readNotes" class="link">Read Notes</a></li>
+				</ul>
+			</nav>
+		</section>
+		
+		<style>
+			.header {
+				position: fixed;
+				background: white;
+				top: 0;
+				width: 100%;
+			}
+		
+			.header nav ul li {
+				display: inline;
+			}
+		
+			.body {
+				width: 80%;
+				padding: 5%;
+				margin: auto;
+			}
+			
+			.section * {
+				clear: right;
+			}
+			
+			.body #takeNotes div {
+				display: flex;
+			}
+			
+			.body #takeNotes div div {
+				display: inline;
+				width: 30%;
+			}
+			
+			#outcomes * input { width: 95%; }
+			
+			.body div {
+				display: none;
+			}
+			
+			li p {
+				margin: 5px;
+			}
+			
+		</style>
+		
+		<section class="body">
+			<div id="takeNotes">
+				<div>
+					<div id="pnlTitle" class="section">
+						<h2>Title</h2>
+						<input type="text" id="txtTitle" />
+					</div>
+				</div>
+				
+				
+				<div id="pnlDateTime" class="section">
+					<div>
+						<h2>Date: </h2>
+						<input type="date" id="txtDate" />
+					</div>
+					<div>
+						<h2>Time: </h2>
+						<input type="time" id="txtTime" />
+					</div>				
+				</div>
+				
+				
+				<div>
+					<div id="pnlParties" class="section">
+						<h2>Meeting Parties</h2>
+						<span>1. <input type="text" class="party" /></span>				
+					</div>
+					
+					<div id="pnlAttendees" class="section">
+						<h2>Attendees</h2>
+						<span>1. <input type="text" class="attendee" /></span>
+					</div>
+					
+					<div id="pnlNoShow" class="section">
+						<h2>Invited, but didn't show</h2>
+						<span>1. <input type="text" class="noshow" /></span>			
+					</div>
+				</div>
+				
+				<div id="outcomes" style="display: inline">
+					<div id="pnlActions" class="section">
+						<h2>Actions</h2>
+						<span>1. <input type="text" class="action" /></span>
+					</div>
+					
+					<div id="pnlDecisions" class="section">
+						<h2>Decisions</h2>
+						<span>1. <input type="text" class="decision" /></span>
+					</div>
+				
+				</div>
+				<br />
+				<br />
+				<br />
+				<button id="btnSave" >Upload Notes</button>
+			</div>
+			<div id="readNotes">
+				<ul id="listNotes"></ul>
+				<ul id="readNote"></ul>
+			</div>
+		</section>		
+		
+		<section class="footer">
+		
+		</section>
+		
+		<script>
+			/*
+				PAGE LOAD - DETERMINE WHICH PAGE CONTENT TO SHOW
+			*/
+			(function() {
+				let url = document.URL;
+				let anchor = url.substring(url.indexOf("#")+1);
+				anchor = ((anchor == "" || anchor == url) ? "takeNotes" : anchor);
+				
+				document.getElementById(anchor).style.display = "inline";	 
+				document.querySelectorAll("nav * a").forEach(val => {
+					if (val.className == "link") 
+						val.addEventListener("click", ()=>{ location.reload(); });
+				});
+			})();
+		
+			/*
+				CREATE NEW MEETING MINUTES
+			*/
+			(function() {
+				let d = new Date();
+				document.querySelector("#txtDate").value = 
+					d.getFullYear() + "-" + (d.getMonth() < 10 ? "0" + d.getMonth() : d.getMonth()) 
+						+ "-" + (d.getDate() < 10 ? "0" + d.getDate() : d.getDate());
+						
+				document.querySelector("#txtTime").value = 
+					(d.getHours() < 10 ? "0" + d.getHours() : d.getHours()) 
+						+ ":" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes());
+						
+				document.querySelector("#txtTitle").focus();
+			
+				let lastEvent = undefined;
+				document.addEventListener("keydown", function(event) {
+					function dothething(_querySelector, _class) {
+						let pnl = document.querySelector(_querySelector);
+						let cont = document.createElement("span");
+						cont.innerHTML = "<br />" + pnl.children.length + ". <input type='text' class='" + _class + "' />";
+						pnl.appendChild(cont);
+						document.querySelector(_querySelector + " span:last-child input").focus();
+					}
+					
+					if (lastEvent != undefined && lastEvent.key == "Alt") 
+						switch(event.key) {
+							case "1": dothething("#pnlParties", "party");
+							break;
+							case "2": dothething("#pnlAttendees", "attendee");
+							break;
+							case "3": dothething("#pnlNoShow", "noshow");
+							break;
+							case "4": dothething("#pnlActions", "action");
+							break;
+							case "5": dothething("#pnlDecisions", "decision");
+							break;
+							default: {}
+						}						
+					
+					if (event.key == "Alt") 
+						lastEvent = event;						
+					document.addEventListener("keyup", function(event) {
+						if (event.key == "Alt") 
+							lastEvent = undefined;
+					});
+					
+				});
+				
+				/*
+					SAVE NEW MEETING MINUTES
+				*/
+				document.querySelector("#btnSave").addEventListener("click", function(){
+					let postData = {
+						"TITLE": document.querySelector("#txtTitle").value,
+						"DATE": document.querySelector("#txtDate").value,
+						"TIME": document.querySelector("#txtTime").value,
+						"PARTIES": Object.keys(document.querySelectorAll(".party")).map(key => document.querySelectorAll(".party")[key].value),
+						"ATTENDEES": Object.keys(document.querySelectorAll(".attendee")).map(key => document.querySelectorAll(".attendee")[key].value),
+						"NOSHOWS": Object.keys(document.querySelectorAll(".noshow")).map(key => document.querySelectorAll(".noshow")[key].value),
+						"ACTIONS": Object.keys(document.querySelectorAll(".action")).map(key => document.querySelectorAll(".action")[key].value),
+						"DECISIONS": Object.keys(document.querySelectorAll(".decision")).map(key => document.querySelectorAll(".decision")[key].value)
+					};
+					
+					let req = new XMLHttpRequest();
+					req.open("POST", "http://csdev.cegep-heritage.qc.ca/Students/1523066/MeetingMinutes/updateJson.php");
+					req.send(JSON.stringify(postData));
+					
+					location.reload();
+					
+					<!-- document.querySelectorAll("input").forEach(el => { -->
+						<!-- el.value = ""; -->
+					<!-- }); -->
+					
+					<!-- document.querySelector("#txtDate").value =  -->
+						<!-- d.getFullYear() + "-" + (d.getMonth() < 10 ? "0" + d.getMonth() : d.getMonth())  -->
+							<!-- + "-" + (d.getDate() < 10 ? "0" + d.getDate() : d.getDate()); -->
+						
+					<!-- document.querySelector("#txtTime").value =  -->
+						<!-- (d.getHours() < 10 ? "0" + d.getHours() : d.getHours())  -->
+							<!-- + ":" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes()); -->
+							
+					
+				});		
+			})();	
+
+			/*
+				LOAD UP LIST OF MINUTES
+			*/
+			(function() {
+				let req = new XMLHttpRequest();
+				
+				req.addEventListener("readystatechange", function() {
+					if (req.readyState == 4) {
+						let notes = JSON.parse(req.responseText);
+						
+						let url = document.URL;
+						let qs = url.substring(url.indexOf("=")+1, url.indexOf("#"));
+						qs = ((qs == "" || qs == url.substring(0, url.indexOf("#"))) ? null : qs);
+						
+						if (qs == null) {
+							notes.forEach((note, key) => {
+								var el = document.createElement("li");
+								el.innerHTML = "<a href='index.html?note=" + (key+1) + "#readNotes'>" + (key+1) + ". " 
+									+ note.DATE + " - " + note.TITLE + "</a>";
+								document.querySelector("#listNotes").appendChild(el);
+							});
+						}
+						else {
+							for (key in notes[qs-1]) {
+								var el = document.createElement("li");
+								
+								if (typeof notes[qs-1][key] == "object") {
+									el.innerHTML = "<strong>" + key + ": </strong>";
+									for (val in notes[qs-1][key]) {
+										el.innerHTML += "<p> - " + notes[qs-1][key][val] + "</p>";
+									}
+								}
+								else {
+									el.innerHTML = "<strong>" + key + ": </strong><p>" + notes[qs-1][key] + "</p>";
+								}
+								
+								document.getElementById("readNote").appendChild(el);
+							}							
+							
+							readNote.style.display = "inline";
+							document.getElementById("readNote").innerHTML += "<br /><br /><br /><button id='edit'>Edit</button>";
+							
+							document.getElementById("edit").addEventListener("click", function() {
+								if (document.getElementById("edit").innerText == "Edit") {
+									document.querySelectorAll("#readNote * p").forEach(el => {
+										el.innerHTML = "<input type='text' style='width:100%' value='" + el.innerText.substring(el.innerText.indexOf("-")+2) + "' />";
+										document.getElementById("edit").innerText = "Save";
+									});
+								}
+								else {
+									let postData = {
+										"TITLE": document.querySelector("#readNote li:nth-child(1) p input").value,
+										"DATE": document.querySelector("#readNote li:nth-child(2) p input").value,
+										"TIME": document.querySelector("#readNote li:nth-child(3) p input").value,
+										"PARTIES": Object.keys(document.querySelectorAll("#readNote li:nth-child(4) p input"))
+											.map(key => document.querySelectorAll("#readNote li:nth-child(4) p input")[key].value),
+										"ATTENDEES": Object.keys(document.querySelectorAll("#readNote li:nth-child(5) p input"))
+											.map(key => document.querySelectorAll("#readNote li:nth-child(5) p input")[key].value),
+										"NOSHOWS": Object.keys(document.querySelectorAll("#readNote li:nth-child(6) p input"))
+											.map(key => document.querySelectorAll("#readNote li:nth-child(6) p input")[key].value),
+										"ACTIONS": Object.keys(document.querySelectorAll("#readNote li:nth-child(7) p input"))
+											.map(key => document.querySelectorAll("#readNote li:nth-child(7) p input")[key].value),
+										"DECISIONS": Object.keys(document.querySelectorAll("#readNote li:nth-child(8) p input"))
+											.map(key => document.querySelectorAll("#readNote li:nth-child(8) p input")[key].value)
+									};									
+									
+									let req = new XMLHttpRequest();
+									
+									req.onreadystatechange = () => {
+										console.log(req.responseText);
+									};
+									
+									req.open("POST", "http://csdev.cegep-heritage.qc.ca/Students/1523066/MeetingMinutes/updateJson.php");
+									<!-- req.send("data="+encodeURI(JSON.stringify(postData))+"id="+(qs-1)); -->
+									req.send({"data": JSON.stringify(postData), "id": (qs-1)});
+								}								
+							});
+						}						
+					}
+				});
+				
+				req.open("GET", "http://csdev.cegep-heritage.qc.ca/Students/1523066/MeetingMinutes/readJson.php");
+				req.send();
+			})();
+		</script>
+	</body>
+</html>

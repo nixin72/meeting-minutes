@@ -1,0 +1,677 @@
+[
+    {
+        "TITLE": "Stats class lec 02",
+        "DATE": "2017-08-05",
+        "TIME": "13:40",
+        "PARTIES": [
+            "Student",
+            "Teacher"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Guy"
+        ],
+        "NOSHOWS": [
+            "Johnny"
+        ],
+        "ACTIONS": [
+            "Went over notes "
+        ],
+        "DECISIONS": [
+            "have to do lab one"
+        ]
+    },
+    {
+        "TITLE": "",
+        "DATE": "2017-08-05",
+        "TIME": "16:43",
+        "PARTIES": [
+            ""
+        ],
+        "ATTENDEES": [
+            ""
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            ""
+        ]
+    },
+    {
+        "TITLE": "Anon 1 - Jeremy",
+        "DATE": "2017-08-07",
+        "TIME": "13:03",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Jeremy",
+            "Rest of us"
+        ],
+        "NOSHOWS": [
+            "Allan"
+        ],
+        "ACTIONS": [
+            "Needs to be index.html",
+            "Banner and navigation are two different things - BANNER needs to contain the information"
+        ],
+        "DECISIONS": [
+            "Layout and content area is okay - can differentiate fine",
+            "Color palette doesn't flow well.",
+            "Footer just free floating around on the bottom - Full marks anyways ",
+            "Navigation doesn't contain any bread crumbs ",
+            "Maintenance spelled incorrectly",
+            "Navigation in the hamburger is left aligned, but the burger itself it right aligned"
+        ]
+    },
+    {
+        "TITLE": "Anon 2 - Guillaume",
+        "DATE": "2017-08-07",
+        "TIME": "13:13",
+        "PARTIES": [
+            "Us ",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Guillaume",
+            "Us"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            "Needs some cleaning up"
+        ],
+        "DECISIONS": [
+            "Margins are too wide when the page is full width",
+            "Maintenance was spelled wrong",
+            "Not enough space between information in banner",
+            "Navigation doesn't respond well to mobile ",
+            "Folder structure wasn't right"
+        ]
+    },
+    {
+        "TITLE": "Anon 3 - Brae",
+        "DATE": "2017-08-07",
+        "TIME": "13:17",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Brae",
+            "Us"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Rounded corners with shadow on the main content area",
+            "Banner is a little clunky, takes us a bunch of whitespace",
+            "Banner isn't mobile responsive",
+            "One of the home buttons doesn't work ",
+            "Font size is too small, need a sans-serif font ",
+            "Footer isn't linked to email, computer science site or Heritage site"
+        ]
+    },
+    {
+        "TITLE": "Anon 4 - Amir",
+        "DATE": "2017-08-07",
+        "TIME": "13:21",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Amir"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Good colour scheme",
+            "No real logo? It's not a great logo",
+            "No title to different pages - don't know what page you're on once you've scrolled",
+            "Navigation shouldn't be open by default",
+            "First navigation doesn't open "
+        ]
+    },
+    {
+        "TITLE": "Anon 5 - Martin",
+        "DATE": "2017-08-07",
+        "TIME": "13:25",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Martin"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "No favicon",
+            "Highlighting on navigation is nice ",
+            "Footer missing links",
+            "Banner disapeares on mobile",
+            "Font is kind of hard to read",
+            "Banner isn't wide enough or just ends. It should be 100% or have some sort of break, not just have it end. ",
+            "When you click on an anchor to the same page, the hamburger doesn't close"
+        ]
+    },
+    {
+        "TITLE": "Anon 6 - Philip ",
+        "DATE": "2017-08-07",
+        "TIME": "13:29",
+        "PARTIES": [
+            "Everyone else",
+            "Me"
+        ],
+        "ATTENDEES": [
+            "Me",
+            "Everyone else"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Footer is too big",
+            "Drop shadow is class",
+            "Only ding was the footer"
+        ]
+    },
+    {
+        "TITLE": "Anon 7 - Thomas",
+        "DATE": "2017-08-07",
+        "TIME": "13:32",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Thomas"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Side nav is too wide ",
+            "Need a proper hamburger",
+            "Mailto link broken "
+        ]
+    },
+    {
+        "TITLE": "Anon 8 - Brian",
+        "DATE": "2017-08-07",
+        "TIME": "13:35",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Brian"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            "fix the title"
+        ],
+        "DECISIONS": [
+            "Banner is a graphic, not a div. ",
+            "Not mobile response at all ",
+            "Missing his viewport meta-tag",
+            "Banner missing all the required information",
+            "Banner is Project, not program exit assessment",
+            "Content and background are the same color",
+            "Double borders right up against each other",
+            "No logo",
+            "Too busy",
+            "Menu instead of home ",
+            "Communications overflows onto a new line when too small"
+        ]
+    },
+    {
+        "TITLE": "Anon 9 - Zack",
+        "DATE": "2017-08-07",
+        "TIME": "13:39",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Zack"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Nav is completely broken ",
+            "Need a little more right padding\/margin",
+            "Navigation is too large",
+            "No differentiation on the nav between top level and submenues"
+        ]
+    },
+    {
+        "TITLE": "Anon 9 - Cody",
+        "DATE": "2017-08-07",
+        "TIME": "13:42",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Cody"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "PEA logo directors you to empty page - broken link",
+            "Font size is a little small",
+            "Good breadcrumbs ",
+            "Tiny footer",
+            "If you have the width, us the width. Don't shove things into a tiny space",
+            ""
+        ]
+    },
+    {
+        "TITLE": "Anon 12 - Andrew",
+        "DATE": "2017-08-07",
+        "TIME": "13:45",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Andrew"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Extra stuff in footer, but it's a legal requirement",
+            "Footer too big",
+            "Top of the page is kind of bland",
+            "Color selection on nav is too dark",
+            "Less padding to avoid the scroll"
+        ]
+    },
+    {
+        "TITLE": "Anon 13 - Alex S",
+        "DATE": "2017-08-07",
+        "TIME": "13:50",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Alex S"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Banner stands on it's own on a wide screen ",
+            "Change drop down shadow on content to be more subtle",
+            "Solid Background color on the banner",
+            "The contrasts is a little off, not a fan of the color scheme",
+            "Drop the line beneath the banner",
+            "Box shadow doesn't work on a patterned background",
+            "Stick footer should be hidden on mobile "
+        ]
+    },
+    {
+        "TITLE": "Anon 14 - Louis",
+        "DATE": "2017-08-07",
+        "TIME": "13:54",
+        "PARTIES": [
+            "Us",
+            "ROASTEE"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Louis"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "color scheme is bad - unprofessional",
+            "Super thick borders",
+            "Logo is huge on mobile",
+            "Header and footer jut out past the content",
+            "Anonymous is spelled wrong ",
+            "Missing some content"
+        ]
+    },
+    {
+        "TITLE": "Anon 15 - Max",
+        "DATE": "2017-08-07",
+        "TIME": "13:58",
+        "PARTIES": [
+            "Us ",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Max"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Layout and content is good",
+            "Dinged for Allan's face ",
+            "Go fork yourself is unprofessional ",
+            "Favicon is just a little plain square",
+            "Banner is missing all the required content",
+            "Banner is huge ",
+            "Hamburger doesn't auto-close when you change pages",
+            "Clicking on the arrow will float you up into the navbar",
+            "Image doesn't scale down on mobile "
+        ]
+    },
+    {
+        "TITLE": "Anon 16 - Vann",
+        "DATE": "2017-08-07",
+        "TIME": "14:02",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Vann"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Banner is big, same comment as before, takes up too much real estate",
+            "Banner says Program Exists Assessment - Typo - First thing people see",
+            "No title change for breadcrumb",
+            "Files aren't organized properly - index isn't in root ",
+            "Colors are good, nice background"
+        ]
+    },
+    {
+        "TITLE": "Anon 17 - Alex B",
+        "DATE": "2017-08-07",
+        "TIME": "14:05",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Alex B"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Content and layout area isn't great, lots of dead space, content area is too small",
+            "Logo is just Heritage logo - full loss of points ",
+            "No breadcrumbs on tab or on the navbar",
+            "No footer links",
+            "No coop links",
+            "Footer has no background - hard to read",
+            "Not responsive right before the 768 breakpoint ",
+            "No footer on mobile",
+            "Hover hamburger means you can fat finger it by accident ",
+            "Opening it up in the actual mobile view makes it look totally wrong - looks like desktop  - No viewport meta-tag ",
+            "Gapping in the text on the banner "
+        ]
+    },
+    {
+        "TITLE": "Anon 18 - Troy ",
+        "DATE": "2017-08-07",
+        "TIME": "14:10",
+        "PARTIES": [
+            "Us",
+            "Roastee"
+        ],
+        "ATTENDEES": [
+            "Us",
+            "Troy"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Logo isn't great",
+            "Navigation covers the content",
+            "When you click away from the nav, the nav doesn't close",
+            "Typos - can be forgiven ",
+            "Font size on submenus is way too small",
+            "No chevron to differentiate dropdown menus ",
+            "Wrong headers on certain ",
+            "Hamburger image not responsive - looks bad on iphone 5",
+            "Underline color on links has too much contrast"
+        ]
+    },
+    {
+        "TITLE": "Client Meeting 1 - RAQ system",
+        "DATE": "2017-08-11",
+        "TIME": "08:02",
+        "PARTIES": [
+            "Us",
+            "Client"
+        ],
+        "ATTENDEES": [
+            "Alain Beauparlant",
+            "Philip Dumaresq"
+        ],
+        "NOSHOWS": [
+            "N\/A",
+            "N\/A"
+        ],
+        "ACTIONS": [
+            "Ask Allan if we could see the older original system",
+            "Determine which browsers this should run on ",
+            "Alain will come back in two weeks for follow up on this"
+        ],
+        "DECISIONS": [
+            "Recognition of aquired competencies ",
+            "Instead of taking course, you can evaluate knowledge and allow them to not take the course",
+            "For people who worked in a similar industry",
+            "File Analysis - Resume, Contract, etc",
+            "It's a preliminary assessment. See if RAC is a good fit for the student",
+            "They had to do a self assessment where they situate themselves based on the course competencies",
+            "Each course has different competencies attached to it. They evaluate themselves against these competencies",
+            "Once they've completed evaluating their competencies, they need to submit their resume\/contracts prooving that they've done these competencies in the field",
+            " They then check what the possible method of recognition are - RAQ, Course, EQ\/SU - This is filled out by Alain",
+            "They need to have a content specialist who will determine on a provisional basis what the best suited course of action would be. ",
+            "They just check it out to make sure the course of action makes sense",
+            "The candidate at the beginning of this is not enrolled in the college ",
+            "If they want to pursue this then they apply for the college - which is an entirely different system",
+            "They're presented with a formal progression profile",
+            "Going for a DEC, they need a content specialist for all the Gen-Eds, English, French, Philosophy, and their program specific competencies",
+            "For cont-ed \/ AEC programs, there will be no gen-eds",
+            "When submitting files, they also hand over the courses that they've taken at other colleges or university ",
+            "You can be accredited through work experience or through previous courses taken ",
+            "If the knowledge is outdated, then the content specialist will review that and will recommend accordingly ",
+            "SU - Substitution \/ EQ - Equivalency \/ RAC - Recognition of Acquired Competencies",
+            "Ideally, the applicant would get a form for each Gen-Eds and program specific course and fill out a form with what all they think they have for competencies",
+            "If the student does not meet one of the competencies, they can get training tailored to the competency",
+            "For UI - There needs to be an appeal to the user completing this form - Very welcoming look and feel to it. ",
+            "They need to go through the beginning of this whole process without talking to anybody - Then Alain will reach out to them, they don't need to initiate ",
+            "Allow the candidate to miss information like documents - Gives Alain more reason to reach out to them ",
+            "Goes to Alain, Alain determines who the specialist is, Specialist returns recommendations to Alain, Alain returns the decision to 'student' ",
+            "The content specialist can be anybody Alain knows is an expert in that field, a teacher at this school, a teacher at another one, someone in Montreal, etc. ",
+            "Name, Phone, Email, College student number (if applicable), if they're a previous Heritage student, if they're a Quebec resident (Address information)",
+            "No need for high-level authentication in the early stages. However, when they produce the formal progression profile, there needs to be electronic signatures, but not too much. ",
+            "Competencies pulled from Clara ",
+            "No dealing with validating documents submitted - other than doc size or type maybe so they don't submit a 45gb zip ",
+            "This is purely to assess their suitability for RAQ, everything else is out of the scope of this project - We just build the system flow. ",
+            "This is to establish a relationship with the candidate at a technical level ",
+            "Everything needs to be accessible from outside the school network ",
+            "The system needs to be fully mobile responsive - Doesn't matter for Alain because he's only doing this at work ",
+            "Alain can delete candidates, candidates can make and update their profiles",
+            "Timeline between self assessment to Alain's response - Can be a few weeks before getting back to the candidate ",
+            "By the time they get everything through, it can be a month ",
+            "They submit all their forms before the interview. ",
+            "A kind of partial completion of the profile and once they've submitted everything, then Alain gets to see it all. ",
+            "Doesn't need to entirely match the college look and feel, but it should be recognizable as Heritage",
+            "Needs to work on IE at least"
+        ]
+    },
+    {
+        "TITLE": "Client Meeting 2 - Evaluation System",
+        "DATE": "2017-08-11",
+        "TIME": "10:03",
+        "PARTIES": [
+            "Client",
+            "Students",
+            "Project Supervisor"
+        ],
+        "ATTENDEES": [
+            "Allan - Client",
+            "Richard - Project Manager",
+            "Philip Dumaresq - Student \/ Scribe"
+        ],
+        "NOSHOWS": [
+            ""
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "Allan does marking with rubrics - There's places online that he can do this and use them",
+            "Purposes of the rubric are for allan and others to mark",
+            "Peer assessment portion needs to be then manually done by Allan",
+            "Once a rubric has been defined X people can mark it and they're marking Y person",
+            "Allan needs to be able to define the criteria for the rubric",
+            "Define a marking rubric from a high level - Competencies and a mark to that",
+            "Have a total sum of the mark at the end and notes on what each number means",
+            "Assign a mark based on each criteria, then the system goes and adds it all up. ",
+            "Users - Teacher \/ Assigned Student \/ Markee so that they can go and see their mark ",
+            "The markers need to know who they're marking, but you won't know who marked you ",
+            "More difficult rubrics with ranges of numbers as well with something like 0-6 for fail, 6-7, etc.",
+            "Ability to add comments section to the marking rubric ",
+            "Most complex would be a check list rubric like the one we used in C40 ",
+            "Right now it's all done in either word or excel and it's difficult to compile and use ",
+            "Like the Teammates system that we used, except it will assign actual grades \/ scores ",
+            "Able to export the marks and dump it straight into Omnivox - export as like a CSV",
+            "Mobile friendly absolutely ",
+            "Don't need to be able to create rubrics on mobile, just do the actual marking",
+            "Sometimes need to force comments, depending on the mark to justify a low mark or something",
+            "Ability to share rubrics with other teachers - or parts of a rubric ",
+            "Highest level of organization would be by semester, then by course, then by assignment within that course ",
+            "This needs to serve as a library of all rubrics created by all teachers up on this site",
+            "Keep all data forever",
+            "When creating a rubric, it will walk you through the process - Wizard ",
+            "Send auto-emails with links to teachers to mark certain things",
+            "The biggest thing this solves is peer evaluation rubrics, however it needs to be able to handle all rubrics - Allan should be able to use this system to mark",
+            "No need to be able to print this - the point is to drop paper",
+            "Once a rubric has been submitted by a student, the teacher must be able to decide what the student is able to see each section of it - ie. you may want to hide nasty comments ",
+            "Students can only see their mark once the teacher has approved the marks and comments of all the markers",
+            "Can send rubrics to other teachers, and then once they've marked it, the rubric is gone to them. It will be marked and sent back to original teacher",
+            "Can only ask students to mark specific rows or columns of a rubric",
+            "Allan should be able to log in and check the status of who all has done their marking ",
+            "Should be able to set dates and times for when the rubrics are accessible for students to mark.",
+            "Allan should be notified when the time frame is up with status of who all did it. ",
+            "Teacher should be able to assess the quality of the evaluation that each student has performed. ",
+            "Comments need to be vetted, maybe marks should be vetted too. Marks should be invalidated if they don't at all reflect what they should be. ",
+            "This can allow the teacher to eliminate the outliers in the graders.",
+            "Some sort of statistical tool that the teacher can use to data mine the rubrics",
+            "Teacher should be able to see digested marks of each student for specific category ",
+            "No need for teachers to be able to see a students overall mark for a course they aren't teaching them - only the marks they've given them for a single assignment",
+            "This needs to be able to read all the courses and their students out of Clara",
+            "Once an evaluator has submitted a rubric, they should not be able to go back and change it once the time has been shut down. ",
+            "Self evaluations should also be do-able ",
+            "Make a sort of file system like thing for you to be able to dig through each semester \/ program \/ course \/ assignement and view the rubric for that "
+        ]
+    },
+    {
+        "TITLE": "The Avengers",
+        "DATE": "2017-08-14",
+        "TIME": "11:30",
+        "PARTIES": [
+            "Team "
+        ],
+        "ATTENDEES": [
+            "Brae Walker",
+            "Andrew Ha",
+            "Cody Berube",
+            "Louis Thibodeau",
+            "Philip Dumaresq"
+        ],
+        "NOSHOWS": [
+            "Maxwell Haley"
+        ],
+        "ACTIONS": [
+            ""
+        ],
+        "DECISIONS": [
+            "We decided who the system actors are - RAC specialist, Content Specialist, Candidate, Clara, System DB",
+            "We decided on the user stories for the RAC candidate",
+            "LUNCH BREAK",
+            "We decided on the user stories for the RAC advisor",
+            "We decided on the user stories for the teachers for PAS system",
+            "We decide on the student user stories for PAS system",
+            "Designed use case diagram for the RAC system",
+            "Designed use case diagram for the PAS system",
+            "Estimated the time required for the RAC system",
+            "Estimated the time required for the PAS system"
+        ]
+    },
+    null
+]
